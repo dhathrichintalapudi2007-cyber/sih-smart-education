@@ -1,0 +1,22 @@
+# Python dependencies for the local AI server and scripts.
+# Versions are intentionally unpinned because the original project did not record them.
+# Once you have a working environment, run `pip freeze > requirements.lock.txt` to record exact versions.
+
+# Core (server, translation, TTS)
+torch
+transformers
+accelerate
+huggingface_hub
+snac
+soundfile
+numpy
+psutil
+
+# Used only by some scripts
+requests   # scripts/test_server_endpoints.py
+librosa    # scripts/prepare_test_audio.py
+gTTS       # scripts/prepare_test_audio.py
+
+# Speech recognition (IndicConformer ASR, optional - the /asr endpoint needs it)
+# Large install; uncomment if you have the .nemo ASR model file:
+# nemo_toolkit[asr]

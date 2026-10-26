@@ -1,0 +1,60 @@
+# ---------- Secrets / environment ----------
+.env
+*.env
+!.env.example
+*.pem
+*.key
+*.token
+
+# ---------- Python ----------
+.venv/
+venv/
+env/
+ENV/
+*-venv*/
+__pycache__/
+*.py[cod]
+*$py.class
+.cache/
+.pytest_cache/
+.mypy_cache/
+
+# ---------- Large model weights (download with the backend/download_*.py scripts) ----------
+backend/models/**/*.safetensors
+backend/models/**/*.nemo
+backend/models/**/*.bin
+backend/models/**/*.pt
+backend/models/**/*.pth
+backend/models/**/.cache/
+backend/models/**/*.lock
+
+# ---------- Generated runtime output ----------
+backend/test_audio/live_outputs/
+backend/test_audio/tts_outputs/
+backend/live_translation_result.txt
+*.log
+
+# ---------- Flutter / Dart ----------
+frontend/.dart_tool/
+frontend/build/
+frontend/.flutter-plugins
+frontend/.flutter-plugins-dependencies
+frontend/.packages
+frontend/.pub-cache/
+frontend/.pub/
+
+# ---------- Android / Gradle ----------
+**/.gradle/
+**/local.properties
+*.apk
+*.aab
+*.jks
+*.keystore
+
+# ---------- IDE / OS ----------
+.idea/
+*.iml
+.vscode/
+*.swp
+.DS_Store
+Thumbs.db
